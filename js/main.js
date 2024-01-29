@@ -65,8 +65,9 @@ Vue.component('product', {
     },
     methods: {
         addToCart() {
-            this.cart += 1
+            this.$emit('add-to-cart');
         },
+
         updateProduct(index) {
             this.selectedVariant = index;
             console.log(index);
