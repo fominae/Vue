@@ -100,9 +100,10 @@ let app = new Vue({
         cart: []
     },
     methods: {
-        updateCart() {
-            this.cart += 1;
+        updateCart(id) {
+            this.cart.push(id);
         }
     }
+
 
 })
