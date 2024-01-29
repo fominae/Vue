@@ -111,6 +111,11 @@ Vue.component('product-review', {
 })
 
 Vue.component('product', {
+    mounted() {
+        eventBus.$on('review-submitted', productReview => {
+            this.reviews.push(productReview)
+        })
+    },
     props: {
         premium: {
             type: Boolean,
@@ -182,9 +187,6 @@ Vue.component('product', {
             this.selectedVariant = index;
             console.log(index);
         },
-        addReview(productReview) {
-            this.reviews.push(productReview)
-        }
     },
     computed: {
         title() {
