@@ -113,6 +113,7 @@ Vue.component('product', {
                     variantQuantity: 0
                 }
             ],
+            reviews: []
         }
     },
     methods: {
