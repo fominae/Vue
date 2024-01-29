@@ -1,3 +1,5 @@
+let eventBus = new Vue()
+
 Vue.component('product-tabs', {
     props: {
         reviews: {
