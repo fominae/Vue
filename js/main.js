@@ -1,3 +1,4 @@
+Vue.component('product', {})
 let app = new Vue({
     el: '#app',
     data: {
