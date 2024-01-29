@@ -24,6 +24,10 @@ Vue.component('product-tabs', {
            </li>
          </ul>
        </div>
+       <div>
+        <product-review @review-submitted="addReview"></product-review>
+       </div>
+
      </div>
 `,
 
