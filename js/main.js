@@ -64,7 +64,7 @@ Vue.component('product', {
                     variantQuantity: 0
                 }
             ],
-            cart: 0
+
         }
     },
     methods: {
@@ -98,6 +98,7 @@ Vue.component('product', {
 let app = new Vue({
     el: '#app',
     data: {
-        premium: true
+        premium: true,
+        cart: 0
     }
 })
