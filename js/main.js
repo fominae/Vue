@@ -33,7 +33,8 @@ Vue.component('product-review', {
         return {
             name: null,
             review: null,
-            rating: null
+            rating: null,
+            errors: []
         }
     },
     methods:{
