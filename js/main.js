@@ -1,12 +1,18 @@
 Vue.component('product-tabs', {
     template: `
-   <div>
-     <span class="tab" v-for="(tab, index) in tabs" :key="index">{{ tab }}</span>
+   <div>   
+     <ul>
+       <span class="tab"
+             v-for="(tab, index) in tabs"
+             @click="selectedTab = tab"
+       >{{ tab }}</span>
+     </ul>
    </div>
  `,
     data() {
         return {
-            tabs: ['Reviews', 'Make a Review']
+            tabs: ['Reviews', 'Make a Review'],
+            selectedTab: 'Reviews'  // устанавливается с помощью @click
         }
     }
 })
