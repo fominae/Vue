@@ -141,7 +141,7 @@ Vue.component('product', {
                Add to cart
            </button>    
        </div>           
-         <product-review @review-submitted="addReview"></product-review>
+       <product-tabs :reviews="reviews"></product-tabs>
        </div>
  `,
     data() {
