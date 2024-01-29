@@ -1,15 +1,26 @@
 Vue.component('product-tabs', {
     template: `
-   <div>   
-     <ul>
-       <span class="tab"
-             :class="{ activeTab: selectedTab === tab }"
-             v-for="(tab, index) in tabs"
-             @click="selectedTab = tab"
-       >{{ tab }}</span>
-     </ul>
-   </div>
- `,
+     <div>   
+       <ul>
+         <span class="tab"
+               :class="{ activeTab: selectedTab === tab }"
+               v-for="(tab, index) in tabs"
+               @click="selectedTab = tab"
+         >{{ tab }}</span>
+       </ul>
+       <div>
+         <p v-if="!reviews.length">There are no reviews yet.</p>
+         <ul>
+           <li v-for="review in reviews">
+           <p>{{ review.name }}</p>
+           <p>Rating: {{ review.rating }}</p>
+           <p>{{ review.review }}</p>
+           </li>
+         </ul>
+       </div>
+     </div>
+`,
+
     data() {
         return {
             tabs: ['Reviews', 'Make a Review'],
@@ -124,17 +135,7 @@ Vue.component('product', {
                Add to cart
            </button>    
        </div>           
-       <div>
-            <h2>Reviews</h2>
-            <p v-if="!reviews.length">There are no reviews yet.</p>
-            <ul>
-              <li v-for="review in reviews">
-              <p>{{ review.name }}</p>
-              <p>Rating: {{ review.rating }}</p>
-              <p>{{ review.review }}</p>
-              </li>
-            </ul>
-           </div> <product-review @review-submitted="addReview"></product-review>
+         <product-review @review-submitted="addReview"></product-review>
        </div>
  `,
     data() {
