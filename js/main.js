@@ -1,6 +1,6 @@
 Vue.component('product', {
     template: `
-    <div class="product">
+        <div class="product">
         <div class="product-image">
             <img :src="image" :alt="altText"/>
         </div>
@@ -20,9 +20,7 @@ Vue.component('product', {
                     :style="{ backgroundColor:variant.variantColor }"
                     @mouseover="updateProduct(index)"
             ></div>
-        </div>
-
-        <div class="cart">
+            <div class="cart">
             <p>Cart({{ cart }})</p>
         </div>
 
@@ -33,7 +31,11 @@ Vue.component('product', {
         >
             Add to cart
         </button>
+        </div>
+
+        
     </div>
+</div>
  `,
     data() {
         return {
