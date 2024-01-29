@@ -1,10 +1,22 @@
 Vue.component('product', {
     template: `
    <div class="product">
-    // Здесь будет весь HTML-код, который раньше был в элементе с классом product
+	...
    </div>
- `
+ `,
+    data() {
+        return {
+            // тут будут данные
+        }
+    },
+    methods: {
+        // тут будут методы
+    },
+    computed: {
+        // тут будут вычисляемые свойства
+    }
 })
+
 
 let app = new Vue({
     el: '#app',
