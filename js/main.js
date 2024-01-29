@@ -17,7 +17,14 @@ let app = new Vue({
             }
         ],
         cart: 0
+    },
+
+    methods: {
+        addToCart() {
+            this.cart += 1
+        }
     }
+
 })
 
 
