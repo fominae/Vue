@@ -28,10 +28,6 @@ Vue.component('product', {
            ></div>
           
 
-           <div class="cart">
-               <p>Cart({{ cart }})</p>
-           </div>
-
            <button
                    v-on:click="addToCart"
                    :disabled="!inStock"
