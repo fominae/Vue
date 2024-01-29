@@ -97,7 +97,7 @@ let app = new Vue({
     el: '#app',
     data: {
         premium: true,
-        cart: 0
+        cart: []
     },
     methods: {
         updateCart() {
