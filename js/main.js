@@ -18,7 +18,7 @@ Vue.component('product', {
             <ul>
                 <li v-for="detail in details">{{ detail }}</li>
             </ul>
-
+            <p>User is premium: {{ premium }}</p>
             <div
                     class="color-box"
                     v-for="(variant, index) in variants"
@@ -26,6 +26,7 @@ Vue.component('product', {
                     :style="{ backgroundColor:variant.variantColor }"
                     @mouseover="updateProduct(index)"
             ></div>
+            
             <div class="cart">
             <p>Cart({{ cart }})</p>
         </div>
