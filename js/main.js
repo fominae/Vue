@@ -89,6 +89,7 @@ Vue.component('product', {
            </button>
        
        </div>
+       <product-review @review-submitted="addReview"></product-review>
    </div>
  `,
     data() {
