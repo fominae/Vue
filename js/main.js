@@ -89,7 +89,6 @@ Vue.component('product', {
            </button>
        </div>
        <div>
-       <div>
             <h2>Reviews</h2>
             <p v-if="!reviews.length">There are no reviews yet.</p>
             <ul>
