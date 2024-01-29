@@ -3,6 +3,7 @@ Vue.component('product-tabs', {
    <div>   
      <ul>
        <span class="tab"
+             :class="{ activeTab: selectedTab === tab }"
              v-for="(tab, index) in tabs"
              @click="selectedTab = tab"
        >{{ tab }}</span>
