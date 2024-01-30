@@ -114,6 +114,7 @@ Vue.component('product-review', {
                     review: this.review,
                     rating: this.rating
                 }
+                localStorage.setItem('reviews', JSON.stringify(this.reviews));
                 eventBus.$emit('review-submitted', productReview)
                 this.name = null
                 this.review = null
@@ -129,8 +130,12 @@ Vue.component('product-review', {
 
 Vue.component('product', {
     mounted() {
+        if(localStorage.getItem('reviews')) {
+            this.reviews = JSON.parse(localStorage.getItem('reviews'));
+        }
         eventBus.$on('review-submitted', productReview => {
-            this.reviews.push(productReview)
+            this.reviews.push(productReview);
+            localStorage.setItem('reviews', JSON.stringify(this.reviews));
         })
     },
     props: {
